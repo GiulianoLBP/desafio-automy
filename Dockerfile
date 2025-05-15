@@ -1,7 +1,10 @@
-FROM ubuntu:latest
+FROM node:18
 
-# Expondo a porta 3000
-EXPOSE 3000
+WORKDIR /app
 
-# Entry point padrão
-ENTRYPOINT ["top", "-b"]
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+CMD ["node", "src/main.js"]
