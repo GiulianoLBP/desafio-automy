@@ -18,7 +18,7 @@ Aplicação web para consulta de baterias agendadas por email, com API REST e in
 
 Com o container da aplicação em execução, abra seu navegador e acesse:
 
-    ```bash
+    ``bash
     http://localhost:3000
 
 
