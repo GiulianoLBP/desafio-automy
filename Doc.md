@@ -14,6 +14,24 @@
 Aplicação web para consulta de baterias agendadas por email, com API REST e interface simples para exibição das baterias futuras e passadas.
 
 ---
+### Utilização da Aplicação
+
+Com o container da aplicação em execução, abra seu navegador e acesse:
+
+    ```bash
+    http://localhost:3000
+
+
+Na página inicial, você encontrará um campo para inserir seu endereço de e-mail. Informe seu e-mail e clique no botão **Buscar** para consultar as baterias agendadas.
+
+O sistema exibirá as próximas baterias associadas ao e-mail informado.
+
+Após visualizar as próximas baterias, será disponibilizado um botão chamado **Mostrar baterias passadas**. Clicando nele, você poderá consultar as baterias anteriores vinculadas ao mesmo e-mail.
+
+Este fluxo permite uma navegação simples e eficiente para consultar tanto as baterias futuras quanto as já realizadas.
+
+
+---
 
 ## Funcionalidades
 
