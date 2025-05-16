@@ -1,5 +1,4 @@
 
-// src/front/script.js
 document.getElementById("btnBuscar").addEventListener("click", async () => {
   const email = document.getElementById("email").value.trim();
   if (!email) {

@@ -13,7 +13,6 @@ describe("bateriaService", () => {
       { data_agendamento: "20/04/2023", horario_agendamento: "10h" },
     ];
 
-    // Simular datas retornadas por parseDataHora
     parseDataHora
       .mockReturnValueOnce(new Date("2026-04-20T10:00:00"))
       .mockReturnValueOnce(new Date("2023-04-20T10:00:00"));

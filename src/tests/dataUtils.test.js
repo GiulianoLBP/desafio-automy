@@ -9,7 +9,7 @@ describe("dataUtils", () => {
 
     expect(result).toBeInstanceOf(Date);
     expect(result.getFullYear()).toBe(2025);
-    expect(result.getMonth()).toBe(3); // abril é mês 3 (zero-based)
+    expect(result.getMonth()).toBe(3);
     expect(result.getDate()).toBe(20);
     expect(result.getHours()).toBe(14);
   });
