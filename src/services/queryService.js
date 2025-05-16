@@ -29,7 +29,6 @@ async function getBateriasByEmail(token, email) {
         },
       }
     );
-
     return response.data;
   } catch (error) {
     throw new Error(error.response?.data?.message || "Erro ao consultar dados");
