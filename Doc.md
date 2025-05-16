@@ -14,7 +14,7 @@
 Aplicação web para consulta de baterias agendadas por email, com API REST e interface simples para exibição das baterias futuras e passadas.
 
 ---
-### Utilização da Aplicação
+## Utilização da Aplicação
 
 Com o container da aplicação em execução, abra seu navegador e acesse:
 
@@ -46,6 +46,7 @@ Este fluxo permite uma navegação simples e eficiente para consultar tanto as b
 ### Pré-requisitos
 
 - Docker instalado na máquina
+- Node.js instalado na máquina
 
 ### Estrutura de Diretórios
 
@@ -75,7 +76,6 @@ Este fluxo permite uma navegação simples e eficiente para consultar tanto as b
   - `docker-compose.yaml` – Orquestração dos serviços da aplicação e testes
   - `package.json` – Dependências e scripts npm
   - `package-lock.json` – Versões travadas das dependências npm
-  - `README.md` – Instruções de uso e documentação
   - `Doc.md` – Documento técnico complementar (ex: análise, decisões, etc.)
 
 ### Passos para rodar localmente com Docker
@@ -85,7 +85,7 @@ Este fluxo permite uma navegação simples e eficiente para consultar tanto as b
    ```bash
    git clone https://github.com/GiulianoLBP/desafio-automy/tree/main
 
-2. Entre na pasta do projeto
+2. Entre na pasta do projeto(exemplo abaixo):
 
     ```bash
     cd desafio-automy
