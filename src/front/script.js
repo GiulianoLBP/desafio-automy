@@ -51,16 +51,3 @@ document.getElementById("btnBuscar").addEventListener("click", async () => {
     resultadoDiv.textContent = `Erro: ${error.message || "Erro desconhecido"}`;
   }
 });
-
-document.getElementById("btnTest").addEventListener("click", async () => {
-  const resultEl = document.getElementById("testResult");
-  resultEl.textContent = "Testando...";
-
-  try {
-    const response = await fetch("/ping");
-    const data = await response.json();
-    resultEl.textContent = `Resposta do backend: ${data.message}`;
-  } catch (error) {
-    resultEl.textContent = `Erro ao conectar com backend: ${error.message}`;
-  }
-});
