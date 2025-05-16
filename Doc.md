@@ -60,4 +60,5 @@ Aplicação web para consulta de baterias agendadas por email, com API REST e in
 4. Acesse a aplicação pelo navegador:
 
     ```bash
-    docker-compose up --build
+    http://localhost:3000
+    
