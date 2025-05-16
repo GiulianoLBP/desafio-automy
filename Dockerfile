@@ -1,3 +1,15 @@
+# FROM node:18
+
+# WORKDIR /app
+
+# COPY package*.json ./
+# RUN npm install
+
+# COPY src ./src
+
+# EXPOSE 3000
+
+# CMD ["node", "src/server.js"]
 FROM node:18
 
 WORKDIR /app
@@ -5,6 +17,8 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-COPY . .
+COPY src ./src
 
-CMD ["node", "src/main.js"]
+EXPOSE 3000
+
+CMD ["node", "src/server.js"]

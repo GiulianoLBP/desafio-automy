@@ -20,27 +20,4 @@ function separarBaterias(baterias) {
   return { futuras, passadas };
 }
 
-function gerarMensagem(bateriasFuturas, bateriasPassadas = []) {
-  let mensagem = "🔔 *Suas próximas baterias agendadas:*\n\n";
-
-  if (bateriasFuturas.length === 0) {
-    mensagem += "_Nenhuma bateria agendada._\n";
-  } else {
-    bateriasFuturas.forEach((b) => {
-      mensagem += `🗓️ ${b.data_agendamento} às ${b.horario_agendamento} - ${b.qtde_pessoas} pessoas\n`;
-    });
-  }
-
-  if (bateriasPassadas.length > 0) {
-    mensagem += `\n📚 *Histórico de baterias anteriores:*\n\n`;
-    bateriasPassadas.forEach((b) => {
-      mensagem += `🗓️ ${b.data_agendamento} às ${b.horario_agendamento} - ${b.qtde_pessoas} pessoas\n`;
-    });
-  } else {
-    mensagem += `\nDeseja visualizar suas baterias anteriores? 😊`;
-  }
-
-  return mensagem;
-}
-
-module.exports = { separarBaterias, gerarMensagem };
+module.exports = { separarBaterias };

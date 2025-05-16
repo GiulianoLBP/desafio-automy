@@ -1,24 +1,24 @@
 require("dotenv").config();
 const { authenticate } = require("./services/authService");
-const { fetchBaterias } = require("./services/queryService");
-const { separarBaterias, gerarMensagem } = require("./services/bateriaService");
+const { getBateriasByEmail } = require("./services/queryService");
+const { separarBaterias } = require("./services/bateriaService");
 
-async function main() {
+async function buscarBateriasPorEmail(email) {
   try {
+
+
     const token = await authenticate(process.env.API_USER, process.env.API_PASSWORD);
-    console.log("✅ Autenticado com sucesso!");
 
-    const query = `SELECT * FROM desafio.cadastro_baterias_desafio WHERE email = '${process.env.EMAIL_CLIENTE}'`;
-    const baterias = await fetchBaterias(token, query);
-    console.log(baterias)
+
+    //const query = `SELECT * FROM desafio.cadastro_baterias_desafio WHERE email = '${email}'`;
+    const baterias = await getBateriasByEmail(token, email);
+    //console.log(query,"query")
     const { futuras, passadas } = separarBaterias(baterias);
-    const mensagem = gerarMensagem(futuras, []); // aqui mostramos só futuras
 
-    console.log("\n📨 Mensagem para o cliente:");
-    console.log(mensagem);
+    return { futuras, passadas };
   } catch (error) {
-    console.error("❌ Erro:", error.message);
+    throw new Error(error.message);
   }
 }
 
-main();
+module.exports = { buscarBateriasPorEmail };

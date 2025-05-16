@@ -1,10 +1,27 @@
-version: '3.8'
+# version: '3.8'
+
+# services:
+#   app:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     image: app-desafio-automy
+#     stdin_open: true
+#     tty: true
 
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: app-desafio-automy
+    build: .
+    ports:
+      - "3000:3000"
     stdin_open: true
     tty: true
+    env_file:
+      - .env  # 👈 isso aqui garante que o .env será carregado no container
+
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    env_file:
+      - .env
