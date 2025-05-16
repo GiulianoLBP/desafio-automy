@@ -1,22 +1,25 @@
 const axios = require("axios");
-const { fetchBaterias } = require("../queryService");
+const { getBateriasByEmail } = require("../services/queryService");
 
 jest.mock("axios");
 
 describe("queryService", () => {
   it("deve retornar dados ao consultar com sucesso", async () => {
     const token = "fake-token";
-    const query = "SELECT * FROM baterias";
+    const email = "teste@example.com";
     const mockData = [{ id: 1 }];
 
     axios.post.mockResolvedValue({ data: mockData });
 
-    const result = await fetchBaterias(token, query);
+    const result = await getBateriasByEmail(token, email);
 
     expect(result).toEqual(mockData);
     expect(axios.post).toHaveBeenCalledWith(
       "https://appsaccess.automy.com.br/api/api/desafio/custom/do/query",
-      { query, db: "desafio" },
+      {
+        query: expect.stringContaining(email),
+        db: "desafio"
+      },
       {
         headers: {
           "Content-Type": "application/json",
@@ -31,7 +34,7 @@ describe("queryService", () => {
       response: { data: { message: "Erro na query" } },
     });
 
-    await expect(fetchBaterias("token", "query"))
+    await expect(getBateriasByEmail("token", "user@email.com"))
       .rejects.toThrow("Erro na query");
   });
 });

@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { authenticate } = require("../authService");
+const { authenticate } = require("../services/authService");
 
 jest.mock("axios");
 

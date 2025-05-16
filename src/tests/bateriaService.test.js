@@ -1,4 +1,4 @@
-const { separarBaterias } = require("../bateriaService");
+const { separarBaterias } = require("../services/bateriaService");
 
 jest.mock("../utils/dataUtils", () => ({
   parseDataHora: jest.fn(),

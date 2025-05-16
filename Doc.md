@@ -30,6 +30,37 @@ Aplicação web para consulta de baterias agendadas por email, com API REST e in
 
 - Docker instalado na máquina
 
+### Estrutura de Diretórios
+
+- `DESAFIO-AUTOMY/`
+  - `src/`
+    - `front/` – Contém os arquivos de interface web
+      - `index.html` – Página principal da aplicação
+      - `script.js` – Lógica de interação com o backend via fetch
+      - `style.css` – Estilos da aplicação
+    - `services/` – Serviços de domínio da aplicação
+      - `authService.js` – Lógica de autenticação (mock ou real)
+      - `bateriaService.js` – Lógica principal relacionada às baterias
+      - `queryService.js` – Manipulação de queries SQL
+    - `tests/` – Testes unitários da aplicação
+      - `authService.test.js`
+      - `bateriaService.test.js`
+      - `dataUtils.test.js`
+      - `queryService.test.js`
+    - `utils/`
+      - `app.txt` – Dados ou entrada simulada para testes
+      - `main.js` – Lógica de orquestração e acesso ao domínio
+      - `server.js` – Ponto de entrada do servidor Express
+  - `.env` – Variáveis de ambiente da aplicação
+  - `.gitignore` – Arquivos e pastas ignorados pelo Git
+  - `Dockerfile` – Dockerfile principal para rodar a aplicação
+  - `Dockerfile.test` – Dockerfile usado exclusivamente para rodar testes
+  - `docker-compose.yaml` – Orquestração dos serviços da aplicação e testes
+  - `package.json` – Dependências e scripts npm
+  - `package-lock.json` – Versões travadas das dependências npm
+  - `README.md` – Instruções de uso e documentação
+  - `Doc.md` – Documento técnico complementar (ex: análise, decisões, etc.)
+
 ### Passos para rodar localmente com Docker
 
 1. Clone o repositório:
@@ -52,10 +83,10 @@ Aplicação web para consulta de baterias agendadas por email, com API REST e in
     ```bash
     docker-compose up --build app
 
-3. 2. Build da imagem Docker para o tests:
+3. 2. Build da imagem Docker para o test:
 
     ```bash
-    docker-compose up --build tests
+    docker-compose up --build test
 
 4. Acesse a aplicação pelo navegador:
 
