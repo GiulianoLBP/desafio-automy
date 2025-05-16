@@ -35,4 +35,28 @@ Aplicação web para consulta de baterias agendadas por email, com API REST e in
 1. Clone o repositório:
 
    ```bash
-   git clone <url-do-repositorio>
+   git clone https://github.com/GiulianoLBP/desafio-automy/tree/main
+
+2. Entre na pasta do projeto
+
+    ```bash
+    cd desafio-automy
+
+3. Build da imagem Docker(tanto app quanto tests):
+
+    ```bash
+    docker-compose up --build
+
+3. 1. Build da imagem Docker para o app:
+
+        ```bash
+    docker-compose up --build app
+3. 2. Build da imagem Docker para o tests:
+
+        ```bash
+    docker-compose up --build tests
+
+4. Acesse a aplicação pelo navegador:
+        ```bash
+        ```bash
+    docker-compose up --build
