@@ -49,14 +49,15 @@ Aplicação web para consulta de baterias agendadas por email, com API REST e in
 
 3. 1. Build da imagem Docker para o app:
 
-        ```bash
+    ```bash
     docker-compose up --build app
+
 3. 2. Build da imagem Docker para o tests:
 
-        ```bash
+    ```bash
     docker-compose up --build tests
 
 4. Acesse a aplicação pelo navegador:
-        ```bash
-        ```bash
+
+    ```bash
     docker-compose up --build
