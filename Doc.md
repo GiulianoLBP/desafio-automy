@@ -1,9 +1,9 @@
 # Documentação Técnica 
 
 - Nome: Giuliano Libanio Beghini Percope
-- CPF: 13322254623
-- Email: giuliano2-0@hotmail.com
-- Número: 31994535984
+- CPF: 
+- Email: 
+- Número: 
 
 ---
 
